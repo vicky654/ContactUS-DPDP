@@ -1,13 +1,12 @@
 import React from "react";
-import { useCookieConsent } from "./useCookieConsent";
-import ContactForm from "./components/ContactUsForm";
+import { BrowserRouter as Router } from "react-router-dom";
+import RoutesConfig from "./RoutesConfig";
 
 function App() {
-
-
-
   return (
-    <ContactForm />
+    <Router>
+      <RoutesConfig />
+    </Router>
   );
 }
 
