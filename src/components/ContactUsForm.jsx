@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import ConsentModal from "../Modals/ConsentModal";
 import { callApi } from "../utils/callApi";
+import { FaLinkedin, FaYoutube, FaXTwitter } from "react-icons/fa6";
 
 export default function ContactForm() {
   const [showOtp, setShowOtp] = useState(false);
@@ -177,22 +178,59 @@ export default function ContactForm() {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
       <div className="bg-white shadow-xl rounded-2xl flex w-full max-w-5xl overflow-hidden">
         {/* LEFT SIDE */}
-        <div className="bg-[#0B113C] text-white w-1/3 p-8 flex flex-col justify-between">
-          <div>
-            <h2 className="text-xl font-bold mb-2">Contact Us</h2>
-            <p className="text-sm mb-6">
-              DPD Consultants (A Privacyium Tech Pvt. Ltd. Company)
-              <br />
-              Have a query? Feel free to contact our privacy experts
-            </p>
-            <div className="space-y-3 text-sm">
-              <p>📞 1800-5311-777</p>
-              <p>✉️ info@dpdpconsultants.com</p>
-              <p>For consultations and product demo</p>
-              <p className="font-semibold">Fill out your details to be contacted</p>
-            </div>
-          </div>
+ <div className="bg-[#0B113C] text-white w-1/3 p-8 flex flex-col justify-between">
+      <div>
+        <h2 className="text-xl font-bold mb-2">Contact Us</h2>
+        <p className="text-sm mb-6">
+          DPD Consultants (A Privacyium Tech Pvt. Ltd. Company)
+          <br />
+          Have a query? Feel free to contact our privacy experts
+        </p>
+        <div className="space-y-3 text-sm">
+          <p>📞 1800-5311-777</p>
+          <p>✉️ info@dpdpconsultants.com</p>
+          <p>For consultations and product demo</p>
+          <p className="font-semibold">Fill out your details to be contacted</p>
         </div>
+      </div>
+
+      {/* Social Links */}
+      <div className="mt-6">
+        <p className="text-sm font-semibold mb-2">Follow us:</p>
+        <div className="flex space-x-5 text-2xl">
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/company/dpdpconsultants/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-400 transition-colors"
+          >
+            <FaLinkedin />
+          </a>
+
+          {/* YouTube */}
+          <a
+            href="https://www.youtube.com/@DPDPConsultants"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-red-500 transition-colors"
+          >
+            <FaYoutube />
+          </a>
+
+          {/* X (Twitter) */}
+          <a
+            href="https://x.com/socialdpdp43979"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-400 transition-colors"
+          >
+            <FaXTwitter />
+          </a>
+        </div>
+      </div>
+    </div>
+
 
         {/* RIGHT SIDE FORM */}
         <div className="w-2/3 p-8">
