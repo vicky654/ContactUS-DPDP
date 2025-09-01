@@ -5,6 +5,7 @@ import ThanksPage from "./components/ThanksPage";
 
 function RoutesConfig() {
   return (
+    
     <Routes>
       <Route path="/" element={<ContactForm />} />
       <Route path="/thanks-page" element={<ThanksPage />} />

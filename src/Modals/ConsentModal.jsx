@@ -56,7 +56,7 @@ const ConsentModal = ({ visible, onClose, onAgree, lang, setLang, templateText }
       onRequestClose={onClose}
       ariaHideApp={false}
       className="bg-white rounded-xl shadow-lg max-w-2xl w-full mx-auto mt-20 p-6 overflow-hidden"
-      overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+      overlayClassName="fixed inset-0 bg-[#00000091] bg-opacity-50 flex justify-center items-center"
     >
       {/* Language Selector */}
       <div className="mb-4">
@@ -92,7 +92,7 @@ const ConsentModal = ({ visible, onClose, onAgree, lang, setLang, templateText }
       <div className="flex justify-end space-x-3">
         <button
           onClick={onAgree}
-          className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+          className="bg-[#0B113C] text-white px-4 py-2 rounded-md hover:bg-[#0b113ca8] transition"
         >
           Agree
         </button>
