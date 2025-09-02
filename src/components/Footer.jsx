@@ -7,7 +7,7 @@ function Footer() {
         <p>Copyright © {currentYear} DPDP Consultants (A Privacyium Tech Pvt. Ltd. Company) - All Rights Reserved.</p>
 
 
-
+    
     </div>
   )
 }
