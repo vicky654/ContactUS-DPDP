@@ -19,6 +19,9 @@ export default function ContactForm() {
 
   const navigate = useNavigate();
 
+   const apiUrl = import.meta.env.VITE_API_URL;
+  // console.log(apiUrl, "apiUrl")
+
   // ✅ Validation Schema
   const validationSchema = Yup.object({
     fullName: Yup.string().required("Full Name is required"),
@@ -52,7 +55,7 @@ export default function ContactForm() {
         try {
           setLoading(true);
           const response = await callApi(
-            "https://tech.portal-uat.dpdpconsultants.com/api/v2/create_consent",
+            `${apiUrl}/create_consent`,
             "POST", // ✅ still POST but params go in query string
             {
               name: values.fullName,
@@ -96,7 +99,7 @@ export default function ContactForm() {
     try {
       setLoading(true);
       const response = await callApi(
-        "https://tech.portal-uat.dpdpconsultants.com/api/v2/get/template_details",
+        `${apiUrl}/get/template_details`,
         "GET",
         { department_name: "Careers" }
       );
@@ -113,7 +116,7 @@ export default function ContactForm() {
     try {
       setLoading(true);
       const response = await callApi(
-        "https://tech.portal-uat.dpdpconsultants.com/api/v2/create_consent",
+        `${apiUrl}/create_consent`,
         "POST",
         {
           name: formik.values.fullName,
