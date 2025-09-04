@@ -166,7 +166,7 @@ export default function ScheduleForm() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gray-50 flex flex-col lg:flex-row items-center justify-center p-4 sm:p-6 md:p-8">
+      <div className="min-h-10 bg-gray-50 flex flex-col lg:flex-row items-center justify-center p-4 sm:p-6 md:p-8">
         <div className="bg-white shadow-md rounded-2xl flex flex-col lg:flex-row w-full max-w-7xl overflow-hidden">
           {/* LEFT SIDE */}
           <div className="bg-[#0B113C] text-white w-full lg:w-1/3 p-6 sm:p-8 flex flex-col justify-between">
@@ -174,23 +174,11 @@ export default function ScheduleForm() {
               <h2 className="text-xl font-bold mb-2">Schedule a call</h2>
 
               <img
-                className="rounded-md w-100 h-auto"
+                className="rounded-md w-70 h-auto"
                 src="/contact-schedule.png"
                 alt="DPDP Logo"
               />
-              {/* <p className="text-sm mb-6">
-                DPD Consultants (A Privacyium Tech Pvt. Ltd. Company)
-                <br />
-                Have a query? Feel free to contact our privacy experts
-              </p>
-              <div className="space-y-3 text-md">
-                <p>📞 1800-5311-777</p>
-                <p>✉️ info@dpdpconsultants.com</p>
-                <p>For consultations and product demo</p>
-                <p className="font-semibold">
-                  Fill out your details to be contacted
-                </p>
-              </div> */}
+              
             </div>
 
             {/* Social Links */}
@@ -406,7 +394,7 @@ export default function ScheduleForm() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#0B113C] text-white py-2 rounded-lg hover:bg-[#0b113ca8] hover:cursor-pointer transition disabled:opacity-50 mt-50"
+                className="w-full bg-[#0B113C] text-white py-2 rounded-lg hover:bg-[#0b113ca8] hover:cursor-pointer transition disabled:opacity-50 relative top-40"
               >
                 {loading ? "Processing..." : showOtp ? "Submit OTP" : "Submit"}
               </button>
