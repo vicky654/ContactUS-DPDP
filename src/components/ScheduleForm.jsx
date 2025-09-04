@@ -174,7 +174,7 @@ export default function ScheduleForm() {
               <h2 className="text-xl font-bold mb-2">Schedule a call</h2>
 
               <img
-                className="rounded-md w-70 h-auto"
+                className="rounded-md w-76 h-auto"
                 src="/contact-schedule.png"
                 alt="DPDP Logo"
               />
@@ -215,7 +215,7 @@ export default function ScheduleForm() {
 
           {/* RIGHT SIDE FORM */}
           <div className="w-full lg:w-2/3 p-6 sm:p-8">
-            <h2 className="text-lg font-bold mb-6">
+            <h2 className="text-lg font-bold mb-6 text-gray-800">
               DPDPA Compliance Services | Data Privacy Experts | DPD Consultants
             </h2>
 
