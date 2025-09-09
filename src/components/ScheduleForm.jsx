@@ -394,7 +394,7 @@ export default function ScheduleForm() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#0B113C] text-white py-2 rounded-lg hover:bg-[#0b113ca8] hover:cursor-pointer transition disabled:opacity-50 relative top-40"
+                className="w-full bg-[#0B113C] text-white py-2 rounded-lg hover:bg-[#0b113ca8] hover:cursor-pointer transition disabled:opacity-50"
               >
                 {loading ? "Processing..." : showOtp ? "Submit OTP" : "Submit"}
               </button>

@@ -2,13 +2,19 @@
 import { encode } from 'react-native-jwt-io';
 
 export const generateJWTToken = () => {
+
+  const apiIss = import.meta.env.VITE_API_ISS;
+  const apiAud = import.meta.env.VITE_API_AUD;
+  const apiEmail = import.meta.env.VITE_API_EMAIL;
+  const apiSecret = import.meta.env.VITE_API_SECRET;
+
   const payload = {
-    iss: 'https://portal-uat.dpdpconsultants.com',
-    aud: 'https://tech.portal-uat.dpdpconsultants.com',
-    email: 'jaspal.singh@dpdpconsultants.com',
+    iss: `${apiIss}`,
+    aud: `${apiAud}`,
+    email: `${apiEmail}`,
     expiry: Math.floor(Date.now() / 1000) + 3600,
   };
 
-  const secret = '031950e5-cc58-4e34-b442-70136a791c80';
+  const secret = `${apiSecret}`;
   return encode(payload, secret);
 };
