@@ -8,12 +8,16 @@
 
     <!-- ✅ Cookie Consent Script -->
 
-     <script>console.log("%import.meta.env.cookie%", "cookie")</script>
-    <script
-      src="%import.meta.env.cookie%"
-      defer
-    >
-  console.log("cooke", apiCookie)</script>
+     <script type="module">
+   
+ 
+      console.log("VITE_CONSENT_SCRIPT_URL:", import.meta.env.VITE_CONSENT_SCRIPT_URL);
+ 
+      const script = document.createElement("script");
+      script.src = import.meta.env.VITE_CONSENT_SCRIPT_URL;
+      script.defer = true;
+      document.head.appendChild(script);
+    </script>
   </head>
   <body>
     <div id="root"></div>
