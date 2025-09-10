@@ -1,22 +1,35 @@
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="\favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Schedule DPDP Consultants</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule DPDP Consultants</title>
 
-  <!-- ✅ Load runtime config -->
-  <!-- <script src="/config.js"></script> -->
-   <script src="/config.dev.js"></script>
+    <!-- ✅ Load runtime config -->
+    <script src="/config.js"></script>
 
-  <!-- ✅ Load consent script dynamically -->
-  <script>
-    const script = document.createElement("script");
-    script.src = window.RUNTIME_CONFIG.CONSENT_SCRIPT_URL;
-    script.defer = true;
-    document.head.appendChild(script);
-  </script>
-</head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+    <!-- ✅ Load consent script dynamically -->
+    <script>
+      (function () {
+        if (window.RUNTIME_CONFIG && window.RUNTIME_CONFIG.CONSENT_SCRIPT_URL) {
+          const consentScript = document.createElement("script");
+          consentScript.src = window.RUNTIME_CONFIG.CONSENT_SCRIPT_URL;
+          consentScript.async = true; // or use defer if you prefer
+          document.head.appendChild(consentScript);
+
+          console.log("✅ Consent script loaded:", window.RUNTIME_CONFIG.CONSENT_SCRIPT_URL);
+        } else {
+          console.error("❌ CONSENT_SCRIPT_URL not found in RUNTIME_CONFIG");
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- React entry point -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
