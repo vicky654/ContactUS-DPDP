@@ -9,21 +9,24 @@
     <!-- ✅ Load runtime config -->
     <script src="/config.js"></script>
 
-    <!-- ✅ Load consent script dynamically -->
+    <!-- ✅ Load consent script dynamically with defer -->
     <script>
-      (function () {
+      document.addEventListener("DOMContentLoaded", function () {
         if (window.RUNTIME_CONFIG && window.RUNTIME_CONFIG.CONSENT_SCRIPT_URL) {
           const consentScript = document.createElement("script");
           consentScript.src = window.RUNTIME_CONFIG.CONSENT_SCRIPT_URL;
-          consentScript.async = true; // or use defer if you prefer
-          document.head.appendChild(consentScript);
+          consentScript.defer = true; // 👈 use defer instead of async
+          document.body.appendChild(consentScript);
 
-          console.log("✅ Consent script loaded:", window.RUNTIME_CONFIG.CONSENT_SCRIPT_URL);
+          console.log("✅ Consent script loaded with defer:", window.RUNTIME_CONFIG.CONSENT_SCRIPT_URL);
         } else {
           console.error("❌ CONSENT_SCRIPT_URL not found in RUNTIME_CONFIG");
         }
-      })();
+      });
     </script>
+    <!-- Alternative (static way, no config.js needed) -->
+    <!-- <script src="https://tech.portal-uat.dpdpconsultants.com/cookie/consent.js?client_id=6" defer></script> -->
+
   </head>
 
   <body>
