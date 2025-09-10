@@ -1,0 +1,8 @@
+window.RUNTIME_CONFIG = {
+  API_URL: "__API_URL__",
+  ISS: "__API_ISS__",
+  AUD: "__API_AUD__",
+  EMAIL: "__API_EMAIL__",
+  CONSENT_SCRIPT_URL: "__CONSENT_SCRIPT_URL__",
+  SECRET: "__API_SECRET__"
+};
