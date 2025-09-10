@@ -18,8 +18,10 @@ export default function ContactForm() {
   const [selectedLang, setSelectedLang] = useState("en");
 
   const navigate = useNavigate();
+  const apiUrl = window.RUNTIME_CONFIG.API_URL;
+  // console.log(configapiUrl,"configapiUrl")
 
-   const apiUrl = import.meta.env.VITE_API_URL;
+  //  const apiUrl = import.meta.env.VITE_API_URL;
   // console.log(apiUrl, "apiUrl")
 
   // ✅ Validation Schema

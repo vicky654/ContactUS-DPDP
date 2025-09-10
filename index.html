@@ -1,22 +1,21 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="\favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Schedule DPDP Consultants</title>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="\favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule DPDP Consultants</title>
 
-    <!-- ✅ Cookie Consent Script -->
+  <!-- ✅ Load runtime config -->
+  <script src="/config.js"></script>
 
-     <script type="module">
-      const script = document.createElement("script");
-      script.src = import.meta.env.VITE_CONSENT_SCRIPT_URL;
-      script.defer = true;
-      document.head.appendChild(script);
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+  <!-- ✅ Load consent script dynamically -->
+  <script>
+    const script = document.createElement("script");
+    script.src = window.RUNTIME_CONFIG.CONSENT_SCRIPT_URL;
+    script.defer = true;
+    document.head.appendChild(script);
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
